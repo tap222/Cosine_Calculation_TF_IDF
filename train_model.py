@@ -14,6 +14,8 @@ import pickle
 from scipy import sparse
 import gzip
 
+data = pd.read_excel('',endcoding='latin-1')
+
 def tokenize(s): 
     re_tok = re.compile(f'([{string.punctuation}“”¨_«»®´·º½¾¿¡§£₤‘’])')
     return re_tok.sub(r' \1 ', s).split()  
